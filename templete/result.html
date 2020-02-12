@@ -1,0 +1,213 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JobBoard &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link rel="stylesheet" href="{% static 'css/custom-bs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/line-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/quill.snow.css' %}">
+    
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style type="text/css">
+      table{
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,td{
+        text-align: left;
+        padding: 15px;
+        border-bottom: 1px solid black;
+        font-size: 20px;
+        padding-left: 20px; 
+        color: black;
+      }
+      tr:nth-child(even){
+        background-color: #f2f2f2;
+      }
+      th{
+        background-color: #4CAF50;
+        color: white;
+      }
+      .aa{
+        font-size: 20px;
+        color: black;
+      }
+      
+    </style>    
+  </head>
+  <body id="top">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+    
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="#">SACOE University</a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-{% static 'nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="/" class="nav-link">Home</a></li>
+              <li><a href="#">About</a></li>
+              
+              <li class="has-children">
+                <a href="#" class="active">Activity</a>
+                <ul class="dropdown">
+                  <li><a href="#">Sports</a></li>
+                  <li><a href="#">Acadamically</a></li>
+                  <li><a href="#">Culturals</a></li>
+                  <li><a href="#">Events</a></li>
+                  <li><a href="#">Tour</a></li>
+                  <li><a href="#">Gallery</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url({% static 'images/hero_1.jpg' %} )" id="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="text-white font-weight-bold">Result Page</h1>
+            <div class="custom-breadcrumbs">
+              <a href="/">Home</a> <span class="mx-2 slash">/</span>
+              <span class="text-white"><strong>Result</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section pb-0 portfolio-single" id="next-section">
+
+      <div class="container">
+        
+        <div class="row mb-5 mt-5">
+          <div>
+            <h1>Students Result-2020</h1><br>
+            <div class="aa">
+              <strong>Name: </strong><label id="Name"><b>{{res.name}}</b></label><br><br>
+              <strong>RollNo: </strong><label id="RollNo"><b>{{res.rollnum}}</b></label><br><br>
+            </div>
+              <table>
+                <tr>
+                  <th>SUBJECT</th>
+                  <th>MARKS</th>
+                </tr>
+                <tr>
+                  <td>Programming in C</td>
+                  <td id="m1">{{res.c}}</td>
+                </tr>
+                <tr>
+                  <td>DataStructure</td>
+                  <td id="m2">{{res.ds}}</td>
+                </tr>
+                <tr>
+                  <td>Maths 3</td>
+                  <td id="m3">{{res.m3}}</td>
+                </tr>
+                <tr>
+                  <td>ComputerArchitecture</td>
+                  <td id="m4">{{res.architecture}}</td>
+                </tr>
+                <tr>
+                  <td>DSP</td>
+                  <td id="m5">{{res.dsp}}</td>
+                </tr>
+
+              </table>
+
+          </div>
+
+          <div class="col-lg-4 ml-auto h-100 jm-sticky-top">
+           
+
+            <div class="block__87154 mb-0">
+              <h3 class="mb-4 h4 border-bottom">Student's Info</h3>
+              <ul>
+              <li><p class="mb-0">The Student Who Achieved First Three Ranks Will Be Awarded With Special Scholarships.</p></li><br>
+              <li><p class="mb-0">Those Who Have Failes In Any Of The Subjects Have To Reapear For The Exam In The Aug-2020 Month.</p></li><br>
+              <li><p class="mb-0">The Entrence Exam For The UG Canditate Will Be Held On 12th Jan At Chennai.</p></li><br>
+              <li><p class="mb-0">The Mark Does Not Decide Your Life,So Don't Worry If You Are Failed.</p></li>
+            </div>
+
+            
+
+            
+
+          </div>
+        </div>
+
+        
+
+        
+      </div>
+    </section>
+    
+
+
+    
+    
+  
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/stickyfill.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/quill.min.js' %}"></script>
+    
+    
+    <script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+    
+    <script src="{% static 'js/custom.js' %}"></script>
+   
+   
+     
+  </body>
+</html>
